@@ -27,7 +27,7 @@ jobs:
       - name: Analysing the code with pylint
         continue-on-error: true
         run: |
-          pylint *.py --output-format=parseable --reports=n --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > pylint.txt
+          pylint *.py
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
