@@ -21,9 +21,6 @@ class CalculatorUtils:
     def cube(self, a):
         return a * a * a
 
-    def cubeRoot(self, a):
-        return a ** (1/3)
-
     def power(self, a, b):
         return a ** b
 
