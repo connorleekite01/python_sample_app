@@ -29,6 +29,7 @@ jobs:
           pwd
           ls -lash
           cd tests
+          cat coverage.xml
           ls -lash
           cd ../SampleCalculatorUtils
           ls -lash
