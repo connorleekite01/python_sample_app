@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 100  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -21,6 +21,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pylint pytest pytest-cov selenium playwright
+      - name: Running pytest
+        run: |
+          pytest -v  --cov --cov-report=xml --cov-report=html
+      - name: Analysing the code with pylint
+        continue-on-error: true
+        run: |
+          pylint .
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
