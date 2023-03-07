@@ -26,6 +26,10 @@ jobs:
       - name: Running pytest
         run: |
           pytest -v  --cov --cov-report=xml:tests/coverage.xml --cov-report=html
+          pwd
+          ls -lash
+          cd tests
+          ls -lash
       - name: Analysing the code with pylint
         continue-on-error: true
         run: |
