@@ -1,5 +1,5 @@
 # the following class is a python library that contains the functions for the calculator
-class CalculatorLibrary:
+class CalculatorUtils:
     def add(self, a, b):
         return a + b
 
@@ -26,3 +26,7 @@ class CalculatorLibrary:
 
     def power(self, a, b):
         return a ** b
+
+    # check if the two doubles are equal
+    def doubleEquals(self, a, b):
+        return abs(a - b) < 0.0

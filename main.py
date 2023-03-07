@@ -1,3 +1,5 @@
+from SampleTriangleUtils.TriangleUtils import TriangleUtils
+from SampleCalculatorUtils.calculatorUtils import CalculatorUtils
 # use the calculator library to perform the following operations:
 # 1. add 2 and 3
 # 2. subtract 5 from 10
@@ -11,9 +13,8 @@
 # 10. 3 to the power of 2
 # 11. 2 to the power of 0.5
 
-import calculatorLibrary
 
-calc = calculatorLibrary.CalculatorLibrary()
+calc = CalculatorUtils()
 
 # print all the results with a description of what the result is
 print("1. add 2 and 3: " + str(calc.add(2, 3)))
@@ -27,3 +28,12 @@ print("8. cube root of 8: " + str(calc.cubeRoot(8)))
 print("9. 2 to the power of 3: " + str(calc.power(2, 3)))
 print("10. 3 to the power of 2: " + str(calc.power(3, 2)))
 print("11. 2 to the power of 0.5: " + str(calc.power(2, 0.5)))
+
+tri = TriangleUtils()
+# 12. check if the triangle is equilateral
+# 13. check if the triangle is isosceles
+# 14. check if the triangle is scalene
+# print all results with a description of what the result is
+print("12. check if the triangle is equilateral: " + str(tri.checkTriangleType(2, 2, 2)))
+print("13. check if the triangle is isosceles: " + str(tri.checkTriangleType(2, 2, 3)))
+print("14. check if the triangle is scalene: " + str(tri.checkTriangleType(2, 3, 4)))

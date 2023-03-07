@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+      - release/*
+      - develop
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -23,11 +25,11 @@ jobs:
           pip install pylint pytest pytest-cov selenium playwright
       - name: Running pytest
         run: |
-          pytest -v  --cov --cov-report=xml --cov-report=html
+          pytest -v  --cov --cov-report=xml:tests/coverage.xml --cov-report=html
       - name: Analysing the code with pylint
         continue-on-error: true
         run: |
-          pylint calculator.py --output-format=parseable > pylint.txt
+          pylint main.py --output-format=parseable > pylint.txt
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
