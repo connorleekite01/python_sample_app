@@ -26,13 +26,6 @@ jobs:
       - name: Running pytest
         run: |
           pytest -v  --cov --cov-report=xml --cov-report=html
-          pwd
-          ls -lash
-          cat coverage.xml
-          cd ../SampleCalculatorUtils
-          ls -lash
-          cd ../SampleTriangleUtils
-          ls -lash
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
