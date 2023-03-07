@@ -27,6 +27,6 @@ class CalculatorUtils:
     def power(self, a, b):
         return a ** b
 
-    # check if the two doubles are equal
+    # check if the two ints are equal
     def doubleEquals(self, a, b):
-        return abs(a - b) < 0.0
+        return abs(a - b) < 0.1
