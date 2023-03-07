@@ -30,6 +30,10 @@ jobs:
           ls -lash
           cd tests
           ls -lash
+          cd ../SampleCalculatorUtils
+          ls -lash
+          cd ../SampleTriangleUtils
+          ls -lash
       - name: Analysing the code with pylint
         continue-on-error: true
         run: |
