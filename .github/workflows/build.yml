@@ -27,7 +27,7 @@ jobs:
       - name: Analysing the code with pylint
         continue-on-error: true
         run: |
-          pylint .
+          pylint python_sample_app/.
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
