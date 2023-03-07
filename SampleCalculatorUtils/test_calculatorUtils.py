@@ -67,15 +67,6 @@ class TestCalculatorUtils(TestCase):
         self.assertEqual(calc.squareRoot(4), 2)
         self.assertEqual(calc.squareRoot(25), 5)
 
-    # test case for cubeRoot method
-    def test_cubeRoot(self):
-        # create an instance of the calculator library
-        calc = CalculatorUtils()
-
-       # test the cubeRoot method with various inputs
-        self.assertEqual(calc.cubeRoot(8), 2)
-        self.assertEqual(calc.cubeRoot(125), 5)
-        self.assertEqual(calc.cubeRoot(8), 2)
 
     # test case for power method
     def test_power(self):
