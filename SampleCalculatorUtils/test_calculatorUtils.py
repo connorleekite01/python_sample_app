@@ -1,6 +1,6 @@
 from unittest import TestCase
 from SampleCalculatorUtils.calculatorUtils import CalculatorUtils
-class TestCalculatorLibrary(TestCase):
+class TestCalculatorUtils(TestCase):
     # test case for add method
     def test_add(self):
         # create an instance of the calculator library
@@ -87,7 +87,6 @@ class TestCalculatorLibrary(TestCase):
         self.assertEqual(calc.cubeRoot(8), 2)
         self.assertEqual(calc.cubeRoot(125), 5)
         self.assertEqual(calc.cubeRoot(8), 2)
-        self.assertEqual(calc.cubeRoot(125), 5)
 
     # test case for power method
     def test_power(self):
