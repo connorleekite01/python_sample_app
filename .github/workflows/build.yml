@@ -25,20 +25,14 @@ jobs:
           pip install pylint pytest pytest-cov selenium playwright
       - name: Running pytest
         run: |
-          pytest -v  --cov --cov-report=xml:tests/coverage.xml --cov-report=html
+          pytest -v  --cov --cov-report=xml --cov-report=html
           pwd
           ls -lash
-          cd tests
           cat coverage.xml
-          ls -lash
           cd ../SampleCalculatorUtils
           ls -lash
           cd ../SampleTriangleUtils
           ls -lash
-      - name: Analysing the code with pylint
-        continue-on-error: true
-        run: |
-          pylint main.py --output-format=parseable > pylint.txt
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
