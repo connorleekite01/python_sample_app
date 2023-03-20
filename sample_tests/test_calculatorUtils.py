@@ -4,7 +4,7 @@ class TestCalculatorUtils(TestCase):
     # test case for add method
     def test_add(self):
         # create an instance of the calculator library
-        calc = CalculatorUtils()
+        calc = CalculatorUtils()  
 
        # test the add method with various inputs
         self.assertEqual(calc.add(2, 3), 5)
